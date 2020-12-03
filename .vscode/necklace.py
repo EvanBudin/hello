@@ -1,3 +1,4 @@
+# https://www.reddit.com/r/dailyprogrammer/comments/ffxabb/20200309_challenge_383_easy_necklace_matching/ for the challenge
 originalNecklace = input("Enter original necklace ")
 newNecklace = input("Enter new necklace ")
 twoNecklace = originalNecklace * 2
