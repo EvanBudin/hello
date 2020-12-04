@@ -6,8 +6,6 @@ while len(numberList) > 1:
     while counter < len(numberList):
         numberList[counter] = int(numberList[counter])
         counter = counter + 1
-    numberList = sum(numberList)
-    numberList = str(numberList)
-    numberList = (list(numberList))
+    numberList = (list(str(sum(numberList))))
     numberOfRuns = numberOfRuns + 1
 print(numberOfRuns)
