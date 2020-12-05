@@ -11,5 +11,7 @@ elif operator == "/":
     print(var1 / var2)
 elif operator == "-":
     print(var1 - var2)
+elif operator == "%":
+    print(var1 % var2)
 else:
     print("invalid operator")
