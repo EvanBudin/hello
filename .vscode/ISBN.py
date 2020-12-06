@@ -13,9 +13,9 @@ originalNumber = input("Enter ISBN ")
 originalList = list(originalNumber)
 intList = []
 counter = 0
-if originalList[9] == 'X':
-    originalList[9] = '10'
 if len(originalList) == 10:
+    if originalList[9] == 'X':
+        originalList[9] = '10'
     while counter < len(originalList):
         originalList[counter] = int(originalList[counter])
         counter = counter + 1
