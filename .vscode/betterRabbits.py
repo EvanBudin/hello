@@ -12,7 +12,7 @@ def ageMale():
 
 init = input("Enter Rabbit Values: ")
 init = init.split(" ")
-init = [int(x) for x in init]
+init = [int(y) for y in init]
 femaleRabbits = []
 maleRabbits = []
 dead = 0
