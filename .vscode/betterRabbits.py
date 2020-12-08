@@ -16,18 +16,18 @@ totalRabbitsNeeded = init[2]
 totalRabbits = sum(femaleRabbits) + sum(maleRabbits)
 
 while totalRabbits < totalRabbitsNeeded:
-    counter = 96
+    counter = 95
     fertileRabbits = sum(femaleRabbits)- femaleRabbits[0]-femaleRabbits[1]-femaleRabbits[2]-femaleRabbits[3]
     maleBabyHolder = fertileRabbits*5
     femaleBabyHolder = fertileRabbits*9
     for z in reversed(femaleRabbits):
-        femaleRabbits[counter - 1] = femaleRabbits[counter - 2]
+        femaleRabbits[counter] = femaleRabbits[counter - 1]
         counter = counter - 1
     dead = dead + femaleRabbits[0]
     femaleRabbits[0] = femaleBabyHolder
-    counter = 96
+    counter = 95
     for z in reversed(maleRabbits):
-        maleRabbits[counter-1] = maleRabbits[counter - 2]
+        maleRabbits[counter] = maleRabbits[counter - 1]
         counter = counter -1
     dead = dead + maleRabbits[0]
     maleRabbits[0] = maleBabyHolder
