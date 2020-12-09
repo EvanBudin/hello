@@ -23,4 +23,3 @@ if isSolved == 1:
     print(True)
 elif isSolved == -1:
     print(False)
-    
