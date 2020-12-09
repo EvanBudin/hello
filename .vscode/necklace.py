@@ -13,3 +13,19 @@ elif twoNecklace.find(newNecklace) != -1:
 #if it can't find it, it is not the same necklace
 else:
     print(False)
+
+runCounter = 0
+originalNecklace = list(originalNecklace)
+if len(originalNecklace) ==0:
+    originalNecklace.append("")
+rotateNecklace = []
+rotateNecklace = list(originalNecklace)
+for x in range(len(rotateNecklace)):
+    rotateNecklace.append(rotateNecklace[0])
+    rotateNecklace.pop(0)
+    print(originalNecklace)
+    print(rotateNecklace)
+    if rotateNecklace == originalNecklace:
+        runCounter = runCounter + 1
+
+print(runCounter)

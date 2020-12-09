@@ -20,6 +20,3 @@ while counter < len(numberList):
     endNumber = endNumber + numberList[counter]
     counter = counter + 1
 print (endNumber)
-
-
-
