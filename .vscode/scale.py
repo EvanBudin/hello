@@ -1,3 +1,5 @@
+from playsound import playsound
+
 majorMinor = input("Major or Minor?: ")
 
 if majorMinor == "Major":
@@ -33,3 +35,4 @@ while noteIntake != notes[0]:
     notes[0] = holder
 print(notes)
 print(notes[numList[doIntake]])
+playsound('C:/Users/Evanf/Music/%s.wav' %(notes[numList[doIntake]]))
