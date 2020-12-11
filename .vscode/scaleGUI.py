@@ -1,10 +1,12 @@
 from tkinter import *
 from playsound import playsound
+
 # Sets Init Values For the Variables
 noteIntake = "Init"
 majorMinor = "Init"
 doIntake = "Init"
 notes = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
+    
 # Gets Values From GUI, assigns them, prints them out and plays sound
 def getNums():
     majorMinor = enterMM.get()
@@ -40,6 +42,7 @@ def getNums():
     labelAnswer = Label(root, text = notes[numList[doIntake]])
     labelAnswer.grid(row = 3, column = 1)
     playsound('C:/Users/Evanf/Music/PianoNotes/%s.wav' %(notes[numList[doIntake]]))
+
 # GUI organization
 root = Tk()
 root.geometry("500x200")
@@ -48,17 +51,14 @@ labelKey = Label(root, text = "What Key?")
 labelSolfege = Label(root, text = "What Solfege?")
 bigButton = Button(root, width = 10, height = 5, text = "Push Me", command = getNums)
 bigButton.grid(row = 2, column = 1)
-labelMM.grid(row = 1, column = 0)
-labelKey.grid(row = 1, column = 1)
+labelMM.grid(row = 1, column = 1)
+labelKey.grid(row = 1, column = 0)
 labelSolfege.grid(row = 1, column = 2)
 enterMM = Entry(root, width = 20)
 enterKey = Entry(root, width = 20)
 enterSolfege = Entry(root, width = 20)
 enterSolfege.grid(row = 0, column = 2)
-enterMM.grid(row = 0, column = 0)
-enterKey.grid(row = 0,column = 1)
-# Sets the major or minor values
-
-
+enterMM.grid(row = 0, column = 1)
+enterKey.grid(row = 0,column = 0)
 
 root.mainloop()
