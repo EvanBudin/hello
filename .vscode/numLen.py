@@ -1,0 +1,13 @@
+intake = input("enter number: ")
+zeros = intake.count('0')
+ones = intake.count('1')
+twos = intake.count('2')
+threes = intake.count('3')
+fours = intake.count('4')
+fives = intake.count('5')
+sixes = intake.count('6')
+sevens = intake.count('7')
+eights = intake.count('8')
+nines = intake.count('9')
+length = zeros+ones+twos+threes+fours+fives+sixes+sevens+eights+nines
+print(length)
