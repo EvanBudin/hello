@@ -41,89 +41,89 @@ numList = [str(i) for i in numList]
 print(numList)
 numList = numList[0] + numList[1] + numList[2] + numList[3] + numList[4]
 print(numList)
-
+# This function calculates points scored by runs by checking for every possible run in the game
 def run(numList, points):
-    if numList.find("123") != 0:
-        if numList.find("1234") != 0:
-            if numList.find("12345") != 0:
+    if numList.find("123") != -1:
+        if numList.find("1234") != -1:
+            if numList.find("12345") != -1:
                 points = points + 5
             else:
                 points = points + 4
         else:
             points = points + 3
-    elif numList.find("234") != 0:
-        if numList.find("2345") !=0:
-            if numList.find("23456") != 0:
+    elif numList.find("234") != -1:
+        if numList.find("2345") != -1:
+            if numList.find("23456") != -1:
                 points = points + 5
             else:
                 points = points + 4
         else:
             points = points + 3
-    elif numList.find("345") != 0:
-        if numList.find("3456") !=0:
-            if numList.find("34567") != 0:
+    elif numList.find("345") != -1:
+        if numList.find("3456") != -1:
+            if numList.find("34567") != -1:
                 points = points + 5
             else:
                 points = points + 4
         else:
             points = points + 3
-    elif numList.find("456") != 0:
-        if numList.find("4567") !=0:
-            if numList.find("45678") != 0:
+    elif numList.find("456") != -1:
+        if numList.find("4567") != -1:
+            if numList.find("45678") != -1:
                 points = points + 5
             else:
                 points = points + 4
         else:
             points = points + 3
-    elif numList.find("567") != 0:
-        if numList.find("5678") !=0:
-            if numList.find("56789") != 0:
+    elif numList.find("567") != -1:
+        if numList.find("5678") != -1:
+            if numList.find("56789") != -1:
                 points = points + 5
             else:
                 points = points + 4
         else:
             points = points + 3
-    elif numList.find("678") != 0:
-        if numList.find("6789") !=0:
-            if numList.find("678910") != 0:
+    elif numList.find("678") != -1:
+        if numList.find("6789") != -1:
+            if numList.find("678910") != -1:
                 points = points + 5
             else:
                 points = points + 4
         else:
             points = points + 3
-    elif numList.find("789") != 0:
-        if numList.find("78910") !=0:
-            if numList.find("7891011") != 0:
+    elif numList.find("789") != -1:
+        if numList.find("78910") != -1:
+            if numList.find("7891011") != -1:
                 points = points + 5
             else:
                 points = points + 4
         else:
             points = points + 3
-    elif numList.find("8910") != 0:
-        if numList.find("891011") !=0:
-            if numList.find("89101112") != 0:
+    elif numList.find("8910") != -1:
+        if numList.find("891011") != -1:
+            if numList.find("89101112") != -1:
                 points = points + 5
             else:
                 points = points + 4
         else:
             points = points + 3
-    elif numList.find("91011") != 0:
-        if numList.find("9101112") !=0:
-            if numList.find("910111213") != 0:
+    elif numList.find("91011") != -1:
+        if numList.find("9101112") != -1:
+            if numList.find("910111213") != -1:
                 points = points + 5
             else:
                 points = points + 4
         else:
             points = points + 3
-    elif numList.find("101112") != 0:
-        if numList.find("10111213") != 0:
+    elif numList.find("101112") != -1:
+        if numList.find("10111213") != -1:
             points = points + 4
         else:
             points = points + 3
-    elif numList.find("111213") != 0:
+    elif numList.find("111213") != -1:
         points = points + 3
     return points
-
+# This function checks for pairs by seeing if there is more than one of each card, and adds the amount of points divided by the number of cards needed per card
 def pairs(hand, points):
     if hand.count(hand[0]) == 2:
         points = points + 1
@@ -158,23 +158,25 @@ def pairs(hand, points):
     if hand.count(hand[8]) == 4:
         points = points + 3
     return points
-
+# This function checks for flushes
 def flush(hand, points):
     if hand[1] == hand[3] == hand[5] == hand[7]:
         points = points + 4
         if hand[1] == hand[9]:
             points = points + 1
     return points
-
-def nobs(nextCheck,hand,points):
+#This function checks for nobs on every Jack
+def nobs(nextCheck,hand,points,counter):
+    counter = 0
     for i in hand:
         if (nextCheck == True):
             nextCheck = False
             if (i == hand[9]):
                 points = points +1
-        if (i == "J"):
+        if (i == "J") and counter != 8:
             nextCheck = True
+        counter = counter + 1
     return points
 
-points = nobs(nextCheck,hand,points) + flush(hand, points) + pairs(hand, points) + run(numList, points)
+points = nobs(nextCheck,hand,points,counter) + flush(hand, points) + pairs(hand, points) + run(numList, points)
 print(points)
