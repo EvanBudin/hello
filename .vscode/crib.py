@@ -59,59 +59,85 @@ def fifteens(numList,points):
     print(numList)
     if numList[0] + numList[1] == 15:
         points = points + 2
+        print("fifteen")
     if numList[0] + numList[2] == 15:
         points = points + 2
+        print("fifteen")
     if numList[0] + numList[3] == 15:
         points = points + 2
+        print("fifteen")
     if numList[0] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
     if numList[1] + numList[2] == 15:
         points = points + 2
+        print("fifteen")
     if numList[1] + numList[3] == 15:
         points = points + 2
+        print("fifteen")
     if numList[1] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
     if numList[2] + numList[3] == 15:
         points = points + 2
+        print("fifteen")
     if numList[2] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
     if numList[3] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
 
     if numList[0] + numList[1] + numList[2] == 15:
         points = points + 2
+        print("fifteen")
     if numList[0] + numList[1] + numList[3] == 15:
         points = points + 2
+        print("fifteen")
     if numList[0] + numList[1] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
     if numList[0] + numList[2] + numList[3] == 15:
         points = points + 2
+        print("fifteen")
     if numList[0] + numList[2] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
     if numList[0] + numList[3] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
     if numList[1] + numList[2] + numList[3] == 15:
         points = points + 2
+        print("fifteen")
     if numList[1] + numList[2] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
     if numList[1] + numList[3] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
     if numList[2] + numList[3] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
 
     if numList[0] + numList[1] + numList[2] + numList[3] == 15:
         points = points + 2
+        print("fifteen")
     if numList[0] + numList[1] + numList[2] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
     if numList[0] + numList[1] + numList[3] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
     if numList[0] + numList[2] + numList[3] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
     if numList[1] + numList[2] + numList[3] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
 
     if numList[0] + numList[1] + numList[2] + numList[3] + numList[4] == 15:
         points = points + 2
+        print("fifteen")
     return points
 
 
@@ -123,123 +149,171 @@ def run(numList, points):
         if numList.find("1234") != -1:
             if numList.find("12345") != -1:
                 points = points + 5
+                print("run of 5")
             else:
                 points = points + 4
+                print("run of 4")
         else:
             points = points + 3
+            print("run of 3")
     elif numList.find("234") != -1:
         if numList.find("2345") != -1:
             if numList.find("23456") != -1:
                 points = points + 5
+                print("run of 5")
             else:
                 points = points + 4
+                print("run of 4")
         else:
             points = points + 3
+            print("run of 3")
     elif numList.find("345") != -1:
         if numList.find("3456") != -1:
             if numList.find("34567") != -1:
                 points = points + 5
+                print("run of 5")
             else:
                 points = points + 4
+                print("run of 4")
         else:
             points = points + 3
+            print("run of 3")
     elif numList.find("456") != -1:
         if numList.find("4567") != -1:
             if numList.find("45678") != -1:
                 points = points + 5
+                print("run of 5")
             else:
                 points = points + 4
+                print("run of 4")
         else:
             points = points + 3
+            print("run of 3")
     elif numList.find("567") != -1:
         if numList.find("5678") != -1:
             if numList.find("56789") != -1:
                 points = points + 5
+                print("run of 5")
             else:
                 points = points + 4
+                print("run of 4")
         else:
             points = points + 3
+            print("run of 3")
     elif numList.find("678") != -1:
         if numList.find("6789") != -1:
             if numList.find("678910") != -1:
                 points = points + 5
+                print("run of 5")
             else:
                 points = points + 4
+                print("run of 4")
         else:
             points = points + 3
+            print("run of 3")
     elif numList.find("789") != -1:
         if numList.find("78910") != -1:
             if numList.find("7891011") != -1:
                 points = points + 5
+                print("run of 5")
             else:
                 points = points + 4
+                print("run of 4")
         else:
             points = points + 3
+            print("run of 3")
     elif numList.find("8910") != -1:
         if numList.find("891011") != -1:
             if numList.find("89101112") != -1:
                 points = points + 5
+                print("run of 5")
             else:
                 points = points + 4
+                print("run of 4")
         else:
             points = points + 3
+            print("run of 3")
     elif numList.find("91011") != -1:
         if numList.find("9101112") != -1:
             if numList.find("910111213") != -1:
                 points = points + 5
+                print("run of 5")
             else:
                 points = points + 4
+                print("run of 4")
         else:
             points = points + 3
+            print("run of 3")
     elif numList.find("101112") != -1:
         if numList.find("10111213") != -1:
             points = points + 4
+            print("run of 4")
         else:
             points = points + 3
+            print("run of 3")
     elif numList.find("111213") != -1:
         points = points + 3
+        print("run of 3")
     return points
 # This function checks for pairs by seeing if there is more than one of each card, and adds the amount of points divided by the number of cards needed per card
 def pairs(hand, points):
     if hand.count(hand[0]) == 2:
         points = points + 1
+        print("pair")
     if hand.count(hand[2]) == 2:
         points = points + 1
+        print("pair")
     if hand.count(hand[4]) == 2:
         points = points + 1
+        print("pair")
     if hand.count(hand[6]) == 2:
         points = points + 1
+        print("pair")
     if hand.count(hand[8]) == 2:
         points = points + 1
+        print("pair")
 
     if hand.count(hand[0]) == 3:
         points = points + 2
+        print("three of a kind")
     if hand.count(hand[2]) == 3:
         points = points + 2
+        print("three of a kind")
     if hand.count(hand[4]) == 3:
         points = points + 2
+        print("three of a kind")
     if hand.count(hand[6]) == 3:
         points = points + 2
+        print("three of a kind")
     if hand.count(hand[8]) == 3:
         points = points + 2
+        print("three of a kind")
 
     if hand.count(hand[0]) == 4:
         points = points + 3
+        print("four of a kind")
     if hand.count(hand[2]) == 4:
         points = points + 3
+        print("four of a kind")
     if hand.count(hand[4]) == 4:
         points = points + 3
+        print("four of a kind")
     if hand.count(hand[6]) == 4:
         points = points + 3
+        print("four of a kind")
     if hand.count(hand[8]) == 4:
         points = points + 3
+        print("four of a kind")
     return points
 # This function checks for flushes
 def flush(hand, points):
     if hand[1] == hand[3] == hand[5] == hand[7]:
-        points = points + 4
         if hand[1] == hand[9]:
-            points = points + 1
+            points = points + 5
+            print("flush of 5")
+        else:
+            points = points + 4
+            print("flush of 4")
     return points
 #This function checks for nobs on every Jack
 def nobs(nextCheck,hand,points,counter):
@@ -249,6 +323,7 @@ def nobs(nextCheck,hand,points,counter):
             nextCheck = False
             if (i == hand[9]):
                 points = points +1
+                print("nobs")
         if (i == "J") and counter != 8:
             nextCheck = True
         counter = counter + 1
