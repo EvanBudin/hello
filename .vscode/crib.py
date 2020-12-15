@@ -37,12 +37,88 @@ for i in numList:
     counter = counter + 1
 numList = [int(i) for i in numList]
 numList.sort()
-numList = [str(i) for i in numList]
 print(numList)
-numList = numList[0] + numList[1] + numList[2] + numList[3] + numList[4]
-print(numList)
+
+
+def fifteens(numList,points):
+    counter = 0
+    for i in numList:
+        if i == (11):
+            numList[counter] = 10
+        counter = counter + 1
+    counter = 0
+    for i in numList:
+        if i == (12):
+            numList[counter] = 10
+        counter = counter + 1
+    counter = 0
+    for i in numList:
+        if i == (13):
+            numList[counter] = 10
+        counter = counter + 1
+    print(numList)
+    if numList[0] + numList[1] == 15:
+        points = points + 2
+    if numList[0] + numList[2] == 15:
+        points = points + 2
+    if numList[0] + numList[3] == 15:
+        points = points + 2
+    if numList[0] + numList[4] == 15:
+        points = points + 2
+    if numList[1] + numList[2] == 15:
+        points = points + 2
+    if numList[1] + numList[3] == 15:
+        points = points + 2
+    if numList[1] + numList[4] == 15:
+        points = points + 2
+    if numList[2] + numList[3] == 15:
+        points = points + 2
+    if numList[2] + numList[4] == 15:
+        points = points + 2
+    if numList[3] + numList[4] == 15:
+        points = points + 2
+
+    if numList[0] + numList[1] + numList[2] == 15:
+        points = points + 2
+    if numList[0] + numList[1] + numList[3] == 15:
+        points = points + 2
+    if numList[0] + numList[1] + numList[4] == 15:
+        points = points + 2
+    if numList[0] + numList[2] + numList[3] == 15:
+        points = points + 2
+    if numList[0] + numList[2] + numList[4] == 15:
+        points = points + 2
+    if numList[0] + numList[3] + numList[4] == 15:
+        points = points + 2
+    if numList[1] + numList[2] + numList[3] == 15:
+        points = points + 2
+    if numList[1] + numList[2] + numList[4] == 15:
+        points = points + 2
+    if numList[1] + numList[3] + numList[4] == 15:
+        points = points + 2
+    if numList[2] + numList[3] + numList[4] == 15:
+        points = points + 2
+
+    if numList[0] + numList[1] + numList[2] + numList[3] == 15:
+        points = points + 2
+    if numList[0] + numList[1] + numList[2] + numList[4] == 15:
+        points = points + 2
+    if numList[0] + numList[1] + numList[3] + numList[4] == 15:
+        points = points + 2
+    if numList[0] + numList[2] + numList[3] + numList[4] == 15:
+        points = points + 2
+    if numList[1] + numList[2] + numList[3] + numList[4] == 15:
+        points = points + 2
+
+    if numList[0] + numList[1] + numList[2] + numList[3] + numList[4] == 15:
+        points = points + 2
+    return points
+
+
 # This function calculates points scored by runs by checking for every possible run in the game
 def run(numList, points):
+    numList = [str(i) for i in numList]
+    numList = numList[0] + numList[1] + numList[2] + numList[3] + numList[4]
     if numList.find("123") != -1:
         if numList.find("1234") != -1:
             if numList.find("12345") != -1:
@@ -178,5 +254,5 @@ def nobs(nextCheck,hand,points,counter):
         counter = counter + 1
     return points
 
-points = nobs(nextCheck,hand,points,counter) + flush(hand, points) + pairs(hand, points) + run(numList, points)
+points = nobs(nextCheck,hand,points,counter) + flush(hand, points) + pairs(hand, points) + run(numList, points) + fifteens(numList, points)
 print(points)
