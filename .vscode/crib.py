@@ -140,7 +140,6 @@ def fifteens(numList,points):
         print("fifteen")
     return points
 
-
 # This function calculates points scored by runs by checking for every possible run in the game
 def run(numList, points):
     numList = [str(i) for i in numList]

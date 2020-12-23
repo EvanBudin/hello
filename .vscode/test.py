@@ -1,2 +1,2 @@
 Evan = ["J", "H", "D", "K"]
-print(Evan.sort())
+print(Evan.index("5"))
