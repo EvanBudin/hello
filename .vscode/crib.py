@@ -37,7 +37,7 @@ for i in numList:
     counter = counter + 1
 numList = [int(i) for i in numList]
 numList.sort()
-print(numList)
+# print(numList)
 
 def fifteens(numList,points):
     counter = 0
@@ -55,7 +55,7 @@ def fifteens(numList,points):
         if i == (13):
             numList[counter] = 10
         counter = counter + 1
-    print(numList)
+    # print(numList)
     if numList[0] + numList[1] == 15:
         points = points + 2
         print("fifteen")
@@ -386,53 +386,68 @@ def run(numList, points):
 
 # This function checks for pairs by seeing if there is more than one of each card, and adds the amount of points divided by the number of cards needed per card
 def pairs(hand, points):
+    pairCount = 0
+    tripCount = 0
+    quadCount = 0
     if hand.count(hand[0]) == 2:
         points = points + 1
-        print("pair")
+        pairCount = pairCount + 1
     if hand.count(hand[2]) == 2:
         points = points + 1
-        print("pair")
+        pairCount = pairCount + 1
     if hand.count(hand[4]) == 2:
         points = points + 1
-        print("pair")
+        pairCount = pairCount + 1
     if hand.count(hand[6]) == 2:
         points = points + 1
-        print("pair")
+        pairCount = pairCount + 1
     if hand.count(hand[8]) == 2:
         points = points + 1
-        print("pair")
+        pairCount = pairCount + 1
+    
+    if pairCount == 2:
+        print("one pair")
+    elif pairCount == 4:
+        print("two pairs")
 
     if hand.count(hand[0]) == 3:
         points = points + 2
-        print("three of a kind")
+        tripCount = tripCount + 1
     if hand.count(hand[2]) == 3:
         points = points + 2
-        print("three of a kind")
+        tripCount = tripCount + 1
     if hand.count(hand[4]) == 3:
         points = points + 2
-        print("three of a kind")
+        tripCount = tripCount + 1
     if hand.count(hand[6]) == 3:
         points = points + 2
-        print("three of a kind")
+        tripCount = tripCount + 1
     if hand.count(hand[8]) == 3:
         points = points + 2
+        tripCount = tripCount + 1
+    
+    if tripCount == 3:
         print("three of a kind")
 
     if hand.count(hand[0]) == 4:
         points = points + 3
-        print("four of a kind")
+        quadCount = quadCount + 1
     if hand.count(hand[2]) == 4:
         points = points + 3
-        print("four of a kind")
+        quadCount = quadCount + 1
     if hand.count(hand[4]) == 4:
         points = points + 3
-        print("four of a kind")
+        quadCount = quadCount + 1
     if hand.count(hand[6]) == 4:
         points = points + 3
-        print("four of a kind")
+        quadCount = quadCount + 1
     if hand.count(hand[8]) == 4:
         points = points + 3
+        quadCount = quadCount + 1
+
+    if quadCount == 4:
         print("four of a kind")
+
     return points
 # This function checks for flushes
 def flush(hand, points):
